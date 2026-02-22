@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Valorant Agents</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f1923;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    color: #ff4655;
+}
+
+.agent {
+    border: 2px solid #ff4655;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px;
+    display: inline-block;
+    width: 200px;
+    transition: 0.3s;
+}
+
+.agent:hover {
+    background-color: #ff4655;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #ff4655;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Thông Tin Agent Valorant</h1>
+
+<div class="agent" onclick="showInfo('Jett là Duelist đến từ Hàn Quốc. Kỹ năng thiên về tốc độ.')">
+    <h2>Jett</h2>
+    <p>Duelist</p>
+</div>
+
+<div class="agent" onclick="showInfo('Phoenix là Duelist từ Anh. Có khả năng tự hồi máu.')">
+    <h2>Phoenix</h2>
+    <p>Duelist</p>
+</div>
+
+<div class="agent" onclick="showInfo('Sage là Sentinel từ Trung Quốc. Có thể hồi máu và hồi sinh đồng đội.')">
+    <h2>Sage</h2>
+    <p>Sentinel</p>
+</div>
+
+<div class="agent" onclick="showInfo('Sova là Initiator từ Nga. Chuyên trinh sát.')">
+    <h2>Sova</h2>
+    <p>Initiator</p>
+</div>
+
+<script>
+function showInfo(info) {
+    alert(info);
+}
+</script>
+
+</body>
+</html>
