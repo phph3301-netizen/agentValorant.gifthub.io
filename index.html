@@ -2,148 +2,170 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Valorant Agents Wiki</title>
+<title>Thông Tin Agent Valorant</title>
 
 <style>
 body {
-    font-family: Arial;
     background-color: #0f1923;
     color: white;
+    font-family: Arial;
     margin: 0;
 }
 
 header {
     text-align: center;
-    padding: 20px;
-    background-color: #1f2731;
-    color: #ff4655;
+    padding: 30px;
+    background: #1f2c38;
 }
 
-.agent-list {
+nav {
     text-align: center;
     padding: 20px;
 }
 
-.agent {
-    border: 2px solid #ff4655;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px;
-    display: inline-block;
-    width: 180px;
+nav button {
+    padding: 12px 20px;
+    margin: 5px;
+    background: #ff4655;
+    color: white;
+    border: none;
     cursor: pointer;
-    transition: 0.3s;
+    font-weight: bold;
 }
 
-.agent:hover {
-    background-color: #ff4655;
-}
-
-#content {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-    display: none;
+nav button:hover {
+    background: white;
+    color: black;
 }
 
 .section {
-    margin-top: 30px;
+    display: none;
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
 }
 
-.section h2 {
+.section img {
+    width: 200px;
+    margin: 10px;
+}
+
+h2 {
     color: #ff4655;
 }
-
-img {
-    width: 250px;
-    margin: 10px;
-    border-radius: 10px;
-}
 </style>
+
+<script>
+function showAgent(id) {
+    let sections = document.querySelectorAll(".section");
+    sections.forEach(sec => sec.style.display = "none");
+    document.getElementById(id).style.display = "block";
+}
+</script>
 </head>
 
 <body>
 
 <header>
-<h1>Valorant Agent Wiki</h1>
+<h1>Thông Tin Agent Valorant</h1>
+<p>Trang thông tin chi tiết về các đặc vụ</p>
 </header>
 
-<div class="agent-list">
-    <div class="agent" onclick="loadJett()">Jett</div>
-    <div class="agent" onclick="loadSage()">Sage</div>
+<nav>
+<button onclick="showAgent('jett')">Jett</button>
+<button onclick="showAgent('phoenix')">Phoenix</button>
+<button onclick="showAgent('sage')">Sage</button>
+<button onclick="showAgent('sova')">Sova</button>
+</nav>
+
+<!-- JETT -->
+<div id="jett" class="section">
+<h2>Jett</h2>
+<p><b>Vai trò:</b> Duelist</p>
+<p><b>Quốc tịch:</b> Hàn Quốc</p>
+
+<h3>Cốt truyện</h3>
+<p>Jett là một Radiant đến từ Hàn Quốc. Với khả năng điều khiển gió,
+cô nổi tiếng vì phong cách chiến đấu nhanh, linh hoạt và đầy táo bạo.</p>
+
+<h3>Kỹ năng</h3>
+<ul>
+<li>Q - Updraft: Nhảy cao lên không trung</li>
+<li>E - Tailwind: Lướt nhanh về phía trước</li>
+<li>C - Cloudburst: Ném khói che tầm nhìn</li>
+<li>X - Blade Storm: Triệu hồi dao gió cực mạnh</li>
+</ul>
+
+<h3>Hình ảnh</h3>
+<img src="https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/fullportrait.png">
+<img src="https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/displayicon.png">
 </div>
 
-<div id="content"></div>
+<!-- PHOENIX -->
+<div id="phoenix" class="section">
+<h2>Phoenix</h2>
+<p><b>Vai trò:</b> Duelist</p>
+<p><b>Quốc tịch:</b> Anh</p>
 
-<script>
+<h3>Cốt truyện</h3>
+<p>Phoenix điều khiển lửa và luôn tự tin vào khả năng của mình.
+Anh có thể tự hồi máu nhờ lửa của chính mình.</p>
 
-function loadJett() {
-    document.getElementById("content").style.display = "block";
-    document.getElementById("content").innerHTML = `
-        <h1>Jett</h1>
-        <p><b>Vai trò:</b> Duelist</p>
-        <p><b>Quốc gia:</b> Hàn Quốc</p>
+<h3>Kỹ năng</h3>
+<ul>
+<li>Q - Curveball: Ném cầu lửa làm mù</li>
+<li>E - Hot Hands: Ném lửa gây sát thương</li>
+<li>C - Blaze: Tường lửa chắn đường</li>
+<li>X - Run It Back: Hồi sinh tại vị trí ban đầu</li>
+</ul>
 
-        <div class="section">
-            <h2>Tổng Quan</h2>
-            <p>Jett là một đặc vụ nhanh nhẹn với khả năng di chuyển linh hoạt và áp sát mục tiêu cực nhanh.</p>
-        </div>
+<h3>Hình ảnh</h3>
+<img src="https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/fullportrait.png">
+</div>
 
-        <div class="section">
-            <h2>Bộ Kỹ Năng</h2>
-            <p><b>Q - Cloudburst:</b> Ném khói che tầm nhìn.</p>
-            <p><b>E - Tailwind:</b> Lướt nhanh về phía trước.</p>
-            <p><b>C - Updraft:</b> Bay lên cao.</p>
-            <p><b>X - Blade Storm:</b> Triệu hồi phi tiêu gây sát thương lớn.</p>
-        </div>
+<!-- SAGE -->
+<div id="sage" class="section">
+<h2>Sage</h2>
+<p><b>Vai trò:</b> Sentinel</p>
+<p><b>Quốc tịch:</b> Trung Quốc</p>
 
-        <div class="section">
-            <h2>Cốt Truyện</h2>
-            <p>Jett sinh ra tại Hàn Quốc và được biết đến với khả năng điều khiển gió. Cô tham gia Valorant Protocol sau một sự cố lớn liên quan đến radianite.</p>
-        </div>
+<h3>Cốt truyện</h3>
+<p>Sage là người bảo vệ đội hình. Cô có khả năng hồi máu
+và hồi sinh đồng đội.</p>
 
-        <div class="section">
-            <h2>Hình Ảnh</h2>
-            <img src="https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/fullportrait.png">
-            <img src="https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/displayicon.png">
-        </div>
-    `;
-}
+<h3>Kỹ năng</h3>
+<ul>
+<li>Q - Slow Orb: Làm chậm đối thủ</li>
+<li>E - Healing Orb: Hồi máu</li>
+<li>C - Barrier Orb: Dựng tường</li>
+<li>X - Resurrection: Hồi sinh đồng đội</li>
+</ul>
 
-function loadSage() {
-    document.getElementById("content").style.display = "block";
-    document.getElementById("content").innerHTML = `
-        <h1>Sage</h1>
-        <p><b>Vai trò:</b> Sentinel</p>
-        <p><b>Quốc gia:</b> Trung Quốc</p>
+<h3>Hình ảnh</h3>
+<img src="https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/fullportrait.png">
+</div>
 
-        <div class="section">
-            <h2>Tổng Quan</h2>
-            <p>Sage là đặc vụ hỗ trợ với khả năng hồi máu và hồi sinh đồng đội.</p>
-        </div>
+<!-- SOVA -->
+<div id="sova" class="section">
+<h2>Sova</h2>
+<p><b>Vai trò:</b> Initiator</p>
+<p><b>Quốc tịch:</b> Nga</p>
 
-        <div class="section">
-            <h2>Bộ Kỹ Năng</h2>
-            <p><b>Q - Slow Orb:</b> Làm chậm khu vực.</p>
-            <p><b>E - Healing Orb:</b> Hồi máu.</p>
-            <p><b>C - Barrier Orb:</b> Tạo tường chắn.</p>
-            <p><b>X - Resurrection:</b> Hồi sinh đồng đội.</p>
-        </div>
+<h3>Cốt truyện</h3>
+<p>Sova là cung thủ trinh sát đến từ Nga.
+Anh chuyên thu thập thông tin và phát hiện kẻ địch.</p>
 
-        <div class="section">
-            <h2>Cốt Truyện</h2>
-            <p>Sage là bác sĩ chiến trường của Valorant Protocol với sức mạnh từ radianite.</p>
-        </div>
+<h3>Kỹ năng</h3>
+<ul>
+<li>Q - Shock Bolt: Tên gây sát thương</li>
+<li>E - Recon Bolt: Phát hiện kẻ địch</li>
+<li>C - Owl Drone: Drone trinh sát</li>
+<li>X - Hunter's Fury: Bắn xuyên tường</li>
+</ul>
 
-        <div class="section">
-            <h2>Hình Ảnh</h2>
-            <img src="https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/fullportrait.png">
-            <img src="https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/displayicon.png">
-        </div>
-    `;
-}
-
-</script>
+<h3>Hình ảnh</h3>
+<img src="https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/fullportrait.png">
+</div>
 
 </body>
 </html>
